@@ -1,0 +1,87 @@
+<template>
+   
+       <div class="cartimage">
+        <img src={cartimage} onclick={handleClickk}>
+     
+    </div>
+    <div class="lt-card">
+        <lightning-card if:false={unvisible}>
+            <lightning-tabset>
+                <lightning-tab label="Spare" onclick={displaymsg}>
+                    <lightning-combobox id="comboboxId" name="Assets" class="combox" label="Assets" placeholder="Choose Asset"
+                    value={value} onchange={handleChange} options={statusOptions}>
+                </lightning-combobox>
+                <lightning-card if:false={unvisible}>
+                    <lightning-tabset>
+                        <lightning-tab label="Spare" onclick={displaymsg}>
+                           
+                            <lightning-combobox id="comboboxIdd" name="Assets" class="combox" label="Assets" placeholder="Choose Asset"
+                            value={value} onchange={handleChange} options={statusOption}>
+                        </lightning-combobox>
+                        <lightning-input type="text" onchange={spareDiscritionText1} label="Description"></lightning-input>
+                        <lightning-input type="text" onchange={spareQuantityText1} label="Quantity"></lightning-input>
+                  
+                        <lightning-button variant="success" label="Add To Cart" title="Successful action" onclick={spareButtonClick1} class="slds-m-left_x-small"></lightning-button>
+                        </lightning-tab>
+                        <lightning-tab label="Service" onclick={displaymsg}>
+                    
+                            <lightning-input type="text" onchange={spareNameText} label="Spare Name"></lightning-input>
+                            <lightning-input type="text" onchange={spareDiscritionText} label="Description"></lightning-input>
+                            <lightning-input type="text" onchange={spareQuantityText} label="Quantity"></lightning-input>
+                      
+                            <lightning-button variant="success" label="Add To Cart" title="Successful action" onclick={spareButtonClick} class="slds-m-left_x-small"></lightning-button>
+                </lightning-tab>
+                    </lightning-tabset>
+               
+                   
+                </lightning-card>
+                </lightning-tab>
+                <lightning-tab label="Service" onclick={displaymsg}>
+                    <lightning-combobox id="comboboxIds" name="Assets" class="combox" label="Assets" placeholder="Choose Asset"
+                    value={value} onchange={handleChange} options={statusOptions}>
+                </lightning-combobox>
+                <lightning-card if:false={unvisible}>
+                    <lightning-tabset>
+                        <lightning-tab label="Spare" onclick={displaymsg}>
+                           
+                            <lightning-combobox id="comboboxIdddd" name="Assets" class="combox" label="Assets" placeholder="Choose Asset"
+                            value={value} onchange={handleChange} options={statusOption}>
+                        </lightning-combobox>
+                        <lightning-input type="text" onchange={ServiceDiscritionText1} label="Description"></lightning-input>
+                        <lightning-input type="text" onchange={ServiceQuantityText1} label="Quantity"></lightning-input>
+                  
+                        <lightning-button variant="success" label="Add To Cart" title="Successful action" onclick={serviceButtonClick1} class="slds-m-left_x-small"></lightning-button>
+                        </lightning-tab>
+                        <lightning-tab label="Service" onclick={displaymsg}>
+                    
+                            <lightning-input type="text" onchange={ServiceNameText} label="Service Name"></lightning-input>
+                            <lightning-input type="text" onchange={ServiceDiscritionText} label="Description"></lightning-input>
+                            <lightning-input type="text" onchange={ServiceQuantityText} label="Quantity"></lightning-input>
+                      
+                            <lightning-button variant="success" label="Add To Cart" title="Successful action" onclick={serviceButtonClick} class="slds-m-left_x-small"></lightning-button>
+                </lightning-tab>
+                    </lightning-tabset>
+               
+                   
+                </lightning-card>
+                </lightning-tab>
+            </lightning-tabset>
+       
+           
+        </lightning-card>
+    </div>
+
+
+    <lightning-card if:true={visible}>
+        <p class="text"><lightning-formatted-text value={selectedLabel}>fdgf</lightning-formatted-text></p>
+        <p class="text"><lightning-formatted-text value={textFieldValue}>fdgf</lightning-formatted-text></p>
+        <p class="text"><lightning-formatted-text value={spareQuantity}>fdgf</lightning-formatted-text></p>
+        <p class="text"><lightning-formatted-text value={spareDescription}>fdgf</lightning-formatted-text></p>
+       
+        <div class="savebtn">
+            <lightning-button label="Save" class="savebtn" onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+ 
+   
+</template>

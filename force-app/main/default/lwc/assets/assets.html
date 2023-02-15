@@ -1,0 +1,15 @@
+<template>
+    <lightning-card class="card-wrapper">
+        <template for:each={wiredAsset.data} for:item="assetItem">
+            <ul key={assetItem.id} class="cardul">
+                <li class="cardli">              Name:{assetItem.Name}</li>
+                <li class="cardli">    Product Family:{assetItem.Product_Family__c}</li>
+                <li class="cardli">          Division:{assetItem.Division__c}</li>
+                <li class="cardli">Commissioning Date:{assetItem.Commissioning_Date__c}</li>
+                <li class="cardli">          Warranty:{assetItem.Warranty__c}</li>
+                <li class="cardimage"><lightning-formatted-rich-text value={assetItem.Image__c}></lightning-formatted-rich-text><br />
+                </li>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

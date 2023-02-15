@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={Product2.data}>
+                <template for:each={Product2.data} for:item="Product2">
+                    <p key={Product2.Id}>{Product2.Name}</p>
+                 
+                </template>
+            </template>
+            <template if:true={Product2.error}>
+                
+            </template>
+        </div>
+        <lightning-combobox
+        name="progress"
+        label="Status"
+        value={value}
+        placeholder="Select Progress"
+        options={option}
+        onchange={handleChange} >
+    </lightning-combobox>
+   
+    </lightning-card>
+</template>

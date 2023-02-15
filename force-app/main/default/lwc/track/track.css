@@ -1,0 +1,5 @@
+.slds-tabs_card {
+    display: inline-flex;
+    margin: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10);
+}

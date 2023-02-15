@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <template for:each={WiredContact.data} for:item="contactItems">
+             <p class="slds-tabs_card" key={contactItems.id}>
+                  {contactItems.Name} <br>
+                               
+             </p>
+            
+        </template>
+   </lightning-card>
+</template>

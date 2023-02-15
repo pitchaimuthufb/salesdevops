@@ -1,0 +1,42 @@
+.slds-tabs_card {
+    display: none;
+}
+
+.cartimage {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.lt-card {
+    width: 100%;
+}
+
+.cartimage img {
+    width: 50px;
+}
+
+.combox {
+    border: 1px solid #ccc;
+    width: 50%;
+    margin: 0px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+}
+
+.savebtn {
+    background-color: #ccc !important;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.text {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    display: none;
+}

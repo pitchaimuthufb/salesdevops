@@ -1,0 +1,15 @@
+<template>
+    <template for:each={wiredAccounts.data} for:item="acc">
+         <p key={acc.id}>
+              {acc.Name}
+         </p>
+         
+    </template>
+    <lightning-combobox for:each={wiredAccounts.data} for:item="acount" key={acount.id}
+            name="progress"
+            label="Status"
+            value={acount.Name}
+            placeholder="Select Progress"
+            options={acount.Name}
+            onchange={handleChange} ></lightning-combobox>
+</template>

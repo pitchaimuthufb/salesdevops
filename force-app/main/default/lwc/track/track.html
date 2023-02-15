@@ -1,0 +1,31 @@
+<template>
+    <lightning-tabset>
+        <lightning-tab label="Active Orders" onclick={displaymsg}>
+            <div class="track-card">
+            <template for:each={wireorder.data} for:item="orderitem">
+        
+            <p class="slds-tabs_card" key={orderitem.id}>
+                Case Id :{orderitem.Id} <br>
+                Enquiry ID :  {orderitem.CaseNumber}<br>
+                Created Date: {orderitem.CreatedDate}
+            </p>
+            </template></div>
+        </lightning-tab>
+        <lightning-tab label="Active Services">
+            No Active Services available
+        </lightning-tab>
+        <lightning-tab label="Active Enquiries">
+            <template for:each={wireOpportunity.data} for:item="opportunityitem">
+              
+                <p class="slds-tabs_card" key={opportunityitem.id}>
+                    {opportunityitem.Name} <br>
+                    Enquiry ID :{opportunityitem.Id} <br>
+                    Created Date:{opportunityitem.CreatedDate}
+                </p>
+                </template>
+        </lightning-tab>
+        <lightning-tab label="Active Complaints">
+            No Active Complaints available
+        </lightning-tab>
+    </lightning-tabset>
+</template>

@@ -1,0 +1,62 @@
+<template>
+     <lightning-card>
+          <template for:each={wiredAsset.data} for:item="assetItem">
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {assetItem.Number_Of_Asset__c} <br>
+                    {wiredOpportunity}
+                    Assets
+                 
+               </p>
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {wiredopp.data} <br>
+                    Active Enquiries
+               </p>
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {wiredcase.data} <br>
+                    Active Complaints
+               </p>
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {wiredorder.data} <br>
+                    Active Orders
+               </p>
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {assetItem.Number_Of_Asset__c} <br>
+                    Recommendations
+                 
+
+               </p>
+          </template>
+     </lightning-card>
+     <lightning-card>
+          <template for:each={WiredActiveComplaints.data} for:item="activeComplaints">
+               <p class="slds-tabs_card" key={activeComplaints.id}>
+                    {activeComplaints.Name} <br>
+                    {activeComplaints.Id}<br>
+                    {activeComplaints.CreatedDate}
+                 
+               </p>
+              
+          </template>
+     </lightning-card>
+     <!-- <lightning-card>
+         
+               <p class="text">
+                    {Wireaccid.AccountId} <br>
+                    
+                    Assets
+               </p>
+              
+        
+     </lightning-card> -->
+
+     <!-- <lightning-card>
+          <template for:each={wiredopp.data} for:item="opportunityItem">
+               <p class="slds-tabs_card" key={assetItem.id}>
+                    {opportunityItem} <br>
+                   
+                    opportunity
+               </p>
+              
+          </template>
+     </lightning-card> -->
+</template>
